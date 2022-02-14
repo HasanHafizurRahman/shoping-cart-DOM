@@ -25,7 +25,13 @@ function calculateTotal(){
     const phoneTotal = getInputValue('phone') * 1219;
     const caseTotal = getInputValue('case') * 59;
     const subTotal = phoneTotal + caseTotal;
-    console.log(subTotal);
+    const tax = subTotal / 10;
+    const totalPrice = subTotal + tax;
+
+    // update on the html
+    document.getElementById('sub-total').innerText = subTotal;
+    document.getElementById('tax-amount').innerText = tax;
+    document.getElementById('total-price').innerText = totalPrice;
 }
 
 
@@ -55,4 +61,3 @@ updateProductNumber('case', 59, false);
 
 
 
-// WATCHED VIDEO OF 9:28 , MODULE 28-4;
